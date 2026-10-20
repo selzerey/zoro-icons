@@ -1,0 +1,7 @@
+interface:
+  display_name: "Zoro Icons"
+  short_description: "Draw, check and ship consistent SVG icons, favicons and app icons"
+  brand_color: "#2563eb"
+  default_prompt: "Check the icons in ./icons for consistency and fix what can be fixed safely."
+policy:
+  allow_implicit_invocation: true

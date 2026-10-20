@@ -1,0 +1,9 @@
+node_modules/
+.env
+.env.*
+*.env
+.leak-words
+*.tgz
+scripts/tests/.out-*
+icon-sheet.png
+icon-sheet.md

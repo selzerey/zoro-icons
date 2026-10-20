@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "zoro-icons",
+  "displayName": "Zoro Icons",
+  "version": "1.0.0",
+  "description": "Consistent, verified SVG icons: draw sets on a grid, lint and safely optimize any SVG set, render contact sheets, build React/Vue/web-component/sprite packages, generate favicons and iOS/Android app icons.",
+  "author": {
+    "name": "selzerey",
+    "url": "https://github.com/selzerey"
+  },
+  "homepage": "https://github.com/selzerey/zoro-icons#readme",
+  "repository": "https://github.com/selzerey/zoro-icons",
+  "license": "MIT",
+  "keywords": ["svg", "icons", "favicon", "app-icon", "svgo", "react", "vue", "accessibility"],
+  "agents": []
+}

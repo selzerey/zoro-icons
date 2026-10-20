@@ -1,0 +1,71 @@
+{
+  "name": "zoro-icons",
+  "version": "1.0.0",
+  "description": "Consistent, verified SVG icons: lint any icon set (grid, padding, strokes, colours, pixel alignment, safety, animation), optimize safely, render contact sheets, build React/Vue/web-component/sprite packages, and generate favicons and iOS/Android app icons from one SVG. CLI and agent skill for Claude Code and Codex.",
+  "keywords": [
+    "svg",
+    "icons",
+    "icon-set",
+    "svg-icons",
+    "lint",
+    "svgo",
+    "favicon",
+    "app-icon",
+    "pwa",
+    "maskable",
+    "react-icons",
+    "vue-icons",
+    "web-components",
+    "accessibility",
+    "claude-code",
+    "codex",
+    "agent-skill"
+  ],
+  "homepage": "https://github.com/selzerey/zoro-icons#readme",
+  "bugs": {
+    "url": "https://github.com/selzerey/zoro-icons/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/selzerey/zoro-icons.git"
+  },
+  "license": "MIT",
+  "author": "selzerey",
+  "type": "module",
+  "bin": {
+    "zoro-icons": "cli/zoro-icons.mjs"
+  },
+  "files": [
+    "SKILL.md",
+    "agents",
+    "cli",
+    "references",
+    "scripts",
+    "!scripts/tests",
+    ".claude-plugin",
+    "CHANGELOG.md",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "lint-icons": "node scripts/lint.mjs",
+    "leak-check": "node scripts/leak-check.mjs",
+    "vendor": "node tools/vendor.mjs",
+    "test": "node --test \"scripts/tests/*.test.mjs\""
+  },
+  "devDependencies": {
+    "@resvg/resvg-wasm": "2.6.2",
+    "@vue/server-renderer": "3.5.13",
+    "esbuild": "^0.25.10",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "svgo": "4.1.0",
+    "vue": "3.5.13"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

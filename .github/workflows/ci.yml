@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node: [22, 24]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      # The skill itself must run from a plain clone, before any npm install.
+      - run: node cli/zoro-icons.mjs lint examples/basic
+      - run: npm ci
+      - run: npm test
+      - run: node scripts/leak-check.mjs --all
+
+  node20:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node cli/zoro-icons.mjs lint examples/basic
+      - run: node cli/zoro-icons.mjs favicon examples/basic/star.svg --out /tmp/fav
+
+  vendor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm ci
+      - name: Bundled files match package.json
+        run: |
+          npm run vendor
+          git diff --exit-code -- scripts/lib/vendor

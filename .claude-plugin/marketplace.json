@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "zoro-icons",
+  "description": "Zoro Icons by selzerey",
+  "owner": {
+    "name": "selzerey",
+    "url": "https://github.com/selzerey"
+  },
+  "plugins": [
+    {
+      "name": "zoro-icons",
+      "source": "./",
+      "description": "Consistent, verified SVG icons, favicons and app icons.",
+      "category": "design"
+    }
+  ]
+}
