@@ -110,5 +110,5 @@ export function doctor({ log = console.log } = {}) {
     const v = (fs.readFileSync(f, "utf8").match(/version:\s*"?([\d.]+)/) ?? [])[1] ?? "?";
     log(`  ✔ ${agent.padEnd(6)} ${v.padEnd(8)} ${dir}`);
   }
-  if (!any) log(`  none — run "npx ${SKILL} install"`);
+  if (!any) log(`  none — run "npx @selzerey/zoro-icons install"`);
 }

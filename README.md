@@ -1,6 +1,6 @@
 # Zoro Icons
 
-[![npm](https://img.shields.io/npm/v/zoro-icons.svg)](https://www.npmjs.com/package/zoro-icons)
+[![npm](https://img.shields.io/npm/v/@selzerey/zoro-icons.svg)](https://www.npmjs.com/package/@selzerey/zoro-icons)
 [![CI](https://github.com/selzerey/zoro-icons/actions/workflows/ci.yml/badge.svg)](https://github.com/selzerey/zoro-icons/actions/workflows/ci.yml)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![node](https://img.shields.io/badge/node-%E2%89%A520-brightgreen)
@@ -19,7 +19,7 @@ agent draws it, checks it, renders it, looks at it and fixes it — and as a pla
 48 px on light and dark, with the padding (live area) dashed.*
 
 ```text
-$ npx zoro-icons lint ./icons
+$ npx @selzerey/zoro-icons lint ./icons
 
 # Icon lint: ./icons
 
@@ -77,10 +77,10 @@ Requires **Node.js 20+**.
 |---|---|
 | Claude Code | `/plugin install zoro-icons --marketplace selzerey/zoro-icons` |
 | Claude Code (older than 2.1.275) | `/plugin marketplace add selzerey/zoro-icons` then `/plugin install zoro-icons@zoro-icons` |
-| Codex | `npx zoro-icons install --codex` (copies to `~/.agents/skills`), then restart Codex |
-| Both | `npx zoro-icons install` (every agent found) · `--project` for this repository only |
+| Codex | `npx @selzerey/zoro-icons install --codex` (copies to `~/.agents/skills`), then restart Codex |
+| Both | `npx @selzerey/zoro-icons install` (every agent found) · `--project` for this repository only |
 | Other agents (Cursor, Gemini CLI, …) | `npx skills add selzerey/zoro-icons` |
-| Terminal only | `npx zoro-icons help` or `npm install -g zoro-icons` |
+| Terminal only | `npx @selzerey/zoro-icons help` or `npm install -g @selzerey/zoro-icons` |
 
 Then ask your agent, for example:
 
@@ -90,6 +90,9 @@ Then ask your agent, for example:
 - *"Turn ./icons into React components with TypeScript types."*
 
 ## Commands
+
+After `npm install -g @selzerey/zoro-icons` the command is `zoro-icons`; without installing, prefix each line with
+`npx @selzerey/zoro-icons` instead.
 
 ```bash
 zoro-icons init ./icons                  # save the set's grid rules to zoro-icons.json (or 24-grid defaults)
@@ -190,7 +193,7 @@ Composer. Android: adaptive foreground/background/monochrome layers (432 px, art
 ## Use in CI
 
 ```yaml
-- run: npx -y zoro-icons lint ./src/icons   # fails the job on errors
+- run: npx -y @selzerey/zoro-icons lint ./src/icons   # fails the job on errors
 ```
 
 ## How it measures

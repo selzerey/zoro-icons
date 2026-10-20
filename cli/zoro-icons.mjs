@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // zoro-icons command line: lint, fix, render, build icon sets, generate favicons and app icons, and install the skill
-// for Claude Code and Codex. `npx zoro-icons help` lists everything.
+// for Claude Code and Codex. `npx @selzerey/zoro-icons help` lists everything.
 import { isMain } from "../scripts/lib/args.mjs";
 import { doctor, install, SKILL, uninstall, VERSION } from "../scripts/lib/install.mjs";
 
@@ -26,9 +26,9 @@ Skill
 Each command prints its options with --help, e.g. zoro-icons favicon --help
 
 Examples
-  npx zoro-icons lint ./icons
-  npx zoro-icons fix ./icons --write && npx zoro-icons build ./icons --out ./dist
-  npx zoro-icons favicon logo.svg --out public --dark-color "#f5f5f5"
+  npx @selzerey/zoro-icons lint ./icons
+  npx @selzerey/zoro-icons fix ./icons --write && npx @selzerey/zoro-icons build ./icons --out ./dist
+  npx @selzerey/zoro-icons favicon logo.svg --out public --dark-color "#f5f5f5"
 `;
 
 const TOOLS = {

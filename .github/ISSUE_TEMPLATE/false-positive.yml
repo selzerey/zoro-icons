@@ -20,4 +20,4 @@ body:
     id: version
     attributes:
       label: Version
-      placeholder: "npx zoro-icons --version"
+      placeholder: "npx @selzerey/zoro-icons --version"

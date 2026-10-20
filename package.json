@@ -1,5 +1,5 @@
 {
-  "name": "zoro-icons",
+  "name": "@selzerey/zoro-icons",
   "version": "1.0.0",
   "description": "Consistent, verified SVG icons: lint any icon set (grid, padding, strokes, colours, pixel alignment, safety, animation), optimize safely, render contact sheets, build React/Vue/web-component/sprite packages, and generate favicons and iOS/Android app icons from one SVG. CLI and agent skill for Claude Code and Codex.",
   "keywords": [
